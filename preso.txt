@@ -1,0 +1,4 @@
+Issues with shared state:
+
+1. Tug-of-war
+2. Redundant requests between ignorant components

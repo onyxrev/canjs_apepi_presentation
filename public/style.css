@@ -1,0 +1,10 @@
+.box.play-viewer-control{
+  float: left;
+}
+
+.box{
+  margin: 10px;
+  padding: 10px;
+  background-color: #eee;
+  border: 1px dashed black;
+}

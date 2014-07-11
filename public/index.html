@@ -1,54 +1,58 @@
 <html>
-  <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript" src="can.jquery.min.js"></script>
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.js"></script>
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
-  <script type="text/javascript" src="index.js"></script>
+  <head>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="can.jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 
-  <script type="text/mustache" id="day_selector_template">
-    <h2>What day of the month do you want to view?</h2>
-    <label for="day">Day of the Month</label>
-    <input class="day" type="text" value="" />
-  </script>
+    <script type="text/mustache" id="day_selector_template">
+      <h2>What day of the month do you want to view?</h2>
+      <label for="day">Day of the Month</label>
+      <input class="day" type="text" value="" />
+    </script>
 
-  <script type="text/mustache" id="state_viewer_template">
-    <h3>Shared State</h3>
-    <p id="state"></p>
+    <script type="text/mustache" id="state_viewer_template">
+      <h3>Shared State</h3>
+      <p id="state"></p>
 
-    <p id="number_of_state_changes">Number of State Changes: {{ numberOfStateChanges }}</p>
-    <p id="number_of_play_requests">Number of Play Requests: {{ numberOfPlayRequests }}</p>
-  </script>
+      <h3>Requests</h3>
+      <p id="number_of_state_changes">Number of State Changes: {{ numberOfStateChanges }}</p>
+      <p id="number_of_play_requests">Number of Play Requests: {{ numberOfPlayRequests }}</p>
+    </script>
 
-  <script type="text/mustache" id="play_viewer_template">
-    <h3>Plays Viewer</h3>
+    <script type="text/mustache" id="play_viewer_template">
+      <h3>Plays Viewer</h3>
 
-    {{ #plays }}
-      Views: {{ views }}
-    {{ /plays }}
-  </script>
+      {{ #plays }}
+        Views: {{ views }}
+      {{ /plays }}
+    </script>
 
-  <script type="text/mustache" id="category_picker_template">
-    <h3>Category Picker</h3>
-    <select class="category" name="category">
+    <script type="text/mustache" id="category_picker_template">
+      <h3>Category Picker</h3>
+      <select class="category" name="category">
 
-      {{ #categories }}
-        <option value="{{ . }}">{{ . }}</option>
-      {{ /categories }}
+        {{ #categories }}
+          <option value="{{ . }}">{{ . }}</option>
+        {{ /categories }}
 
-      <option
-    </select>
-  </script>
+        <option
+      </select>
+    </script>
 
+    <link href='style.css' type='text/css' rel='stylesheet'>
+  </head>
   <body>
     <h1>Le Noisy Analytics Dashboard</h1>
 
-    <div class="day-selector-control"></div>
-    <div class="state-viewer-control"></div>
-    <div class="category-picker-control"></div>
-    <div class="play-viewer-control"></div>
-    <div class="play-viewer-control"></div>
-    <div class="play-viewer-control"></div>
-    <div class="play-viewer-control"></div>
-    <div class="play-viewer-control"></div>
+    <div class="day-selector-control box"></div>
+    <div class="state-viewer-control box"></div>
+    <div class="category-picker-control box"></div>
+    <div class="play-viewer-control box"></div>
+    <div class="play-viewer-control box"></div>
+    <div class="play-viewer-control box"></div>
+    <div class="play-viewer-control box"></div>
+    <div class="play-viewer-control box"></div>
   </body>
 </html>
