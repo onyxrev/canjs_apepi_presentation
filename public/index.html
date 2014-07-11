@@ -1,27 +1,22 @@
 <html>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="can.jquery.min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.js"></script>
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
   <script type="text/javascript" src="index.js"></script>
-  <script type="text/javascript" src="master.js"></script>
-  <script type="text/javascript" src="category.js"></script>
-  <script type="text/javascript" src="category_picker.js"></script>
-  <script type="text/javascript" src="day.js"></script>
-  <script type="text/javascript" src="day_selector.js"></script>
-  <script type="text/javascript" src="play.js"></script>
-  <script type="text/javascript" src="play_viewer.js"></script>
-  <script type="text/javascript" src="state_viewer.js"></script>
 
   <script type="text/mustache" id="day_selector_template">
-    <h1>What day of the month do you want to view?</h1>
+    <h2>What day of the month do you want to view?</h2>
     <label for="day">Day of the Month</label>
     <input class="day" type="text" value="" />
   </script>
 
   <script type="text/mustache" id="state_viewer_template">
     <h3>Shared State</h3>
-    <p id="number_of_state_changes">Number of State Changes: {{ numberOfStateChanges }}</p>
     <p id="state"></p>
+
+    <p id="number_of_state_changes">Number of State Changes: {{ numberOfStateChanges }}</p>
+    <p id="number_of_play_requests">Number of Play Requests: {{ numberOfPlayRequests }}</p>
   </script>
 
   <script type="text/mustache" id="play_viewer_template">
@@ -50,6 +45,10 @@
     <div class="day-selector-control"></div>
     <div class="state-viewer-control"></div>
     <div class="category-picker-control"></div>
+    <div class="play-viewer-control"></div>
+    <div class="play-viewer-control"></div>
+    <div class="play-viewer-control"></div>
+    <div class="play-viewer-control"></div>
     <div class="play-viewer-control"></div>
   </body>
 </html>
